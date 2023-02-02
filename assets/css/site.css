@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Merriweather Bold'), local('Merriweather-Bold'), url(assets/fonts/merriweather_bold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(assets/fonts/source_sans.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(assets/fonts/SourceSansPro-SemiBold) format('woff2');
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Source Sans Pro Italic'), local('SourceSansPro-It'), url(assets/fonts/SourceSansPro-SemiBoldItalic) format('woff2');
+}
+
+html {
+    overflow-y: scroll;
+    font-family: 'Source Sans Pro';
+}
+
+body {
+    margin: 0 0 5px;
+    line-height: 1.45;
+    background: white;
+    font-size: 16px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+header, article, footer nav {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 { font-family: Merriweather; font-weight: 700; }
+
+h1 { font-size: 32px; line-height: 40px }
+
+h2 { font-size: 26px; line-height: 33px; margin: 37px 0 12px; }
+
+h3 { font-size: 22px; line-height: 26px; margin: 26px 0 12px; }
+
+h4 { font-size: 18px; line-height: 22px; margin: 25px 0 12px; }
+
+a { text-decoration: none }
+
+header {
+    padding: 62px 5px 0;
+}
+
+header > h1 {
+    text-align: center;
+    margin: 63px 0 50px;
+}
+
+header nav, footer nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: 600;
+}
+
+a.logo {
+    padding-left: 67px;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+    letter-spacing: -1px;
+    background-image: url(assets/images/github-mark.png);
+    background-size: 60px;
+    background-position: top 2px left;
+    background-repeat: no-repeat;
+    font-size: 34px;
+    line-height: 37px;
+}
+
+strong { font-weight: 600; }
+
+nav a:link, nav a:visited, a.blocklink:link, a.blocklink:visited, code a:link, code a:visited,
+h2 a:link, h2 a:visited, h3 a:link, h3 a:visited, h4 a:link, h4 a:visited {
+    color: inherit;
+}
+
+code, pre { font-size: 14px; }
+pre { line-height: 22px; padding-left: 20px; overflow-x: auto }
+
+a.blocklink:hover {
+    color: #0075ff;
+}
+
+nav a.active, a:link, a:visited {
+    color: #0075ff;
+}
+
+.navlinks {
+    flex-grow: 1;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+footer .navlinks {
+    align-items: center;
+}
+
+.navlinks > a {
+    margin-left: 17px;
+    padding-bottom: 3px;
+}
+
+.navlinks > a:hover { color: #0075ff; }
+
+nav#toc {
+    position: absolute;
+    box-sizing: border-box;
+    top: 140px;
+    right: calc(50% + 360px);
+    color: #888;
+    min-width: 150px;
+    max-width: 200px;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    padding: 10px 40px 30px 10px;
+    direction: rtl;
+    font-size: 14px;
+    line-height: 23.2px;
+    font-weight: 600;
+}
+
+nav#toc.fixed {
+    position: fixed;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+nav#toc > * {
+    direction: ltr;
+}
+
+.toc-toggle { display: none }
+
+nav#toc input {
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: inherit;
+    font: inherit;
+    background: transparent;
+    color: inherit;
+    outline: none;
+    margin-top: 20px;
+}
+
+nav#toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#toc ul ul {
+    padding-left: 20px;
+}
+
+article {
+    padding: 10px 5px 100px;
+}
+
+footer {
+    margin-bottom: 54px;
+    padding: 14px 5px 0;
+}
+
+h2.hr {
+    font-size: 12px;
+    margin: 50px 0 17px;
+}
+
+hr, h2.hr:after {
+    display: block;
+    content: "";
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+    margin-top: 2px;
+}
+
+hr {
+    margin: 45px 0 39px;
+}
+
+h2.above-list {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 37px;
+    margin-top: 42px;
+}
+
+h2.module {
+    margin-top: 250px;
+    font-size: 28px;
+    line-height: 30px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}
+
+ul.grid-list {
+    list-style: none;
+    padding: 0;
+    margin: 36px 0 -36px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+ul.grid-list > li {
+    display: block;
+    max-width: 340px;
+    min-width: 40%;
+    width: 100%;
+    margin-bottom: 36px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+ul.grid-list.compact > li {
+    min-width: 30%;
+    margin-bottom: 16px;
+    width: auto;
+}
+
+ul.grid-list p {
+    margin: 0;
+}
+
+p, dl, dd, ul, ol, pre { margin-bottom: 23px }
+
+p, dl { margin-top: 1em; }
+
+ul.grid-list h3 {
+    margin: 0 0 9px;
+    line-height: 1;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 830px) {
+h1 { font-size: 22px }
+a.logo {
+    padding-left: 34px;
+    letter-spacing: -1px;
+    background-size: 30px;
+    background-position: top 6px left;
+    background-repeat: no-repeat;
+    font-size: 24px;
+    line-height: 30px;
+}
+body { margin: 0 3px }
+}
+
+@media screen and (max-width: 1130px) {
+nav#toc {
+    position: static;
+    max-width: 720px;
+    padding: 15px 3px 0;
+    width: auto;
+    margin: 0 auto;
+    direction: ltr;
+    color: black;
+    display: none;
+}
+nav#toc.fixed { position: static; }
+nav#toc.open { display: block; }
+.toc-toggle { display: inline; cursor: pointer; }
+}
+
+dd p { margin: 0 }
+dd { margin-left: 20px }
+
+code { margin: 0 2px }
+
+.breaktype {
+    padding-left: 20px;
+}
+
+h2 .keyword, h3 .keyword, h4 .keyword {
+    font-weight: 600;
+    margin-bottom: -4px;
+    color: black;
+}
+h2 .keyword { font-size: 18px }
+h3 .keyword { font-size: 16px }
+h4 .keyword { font-size: 14px }
+
+div.figure { margin: 1em; }
+.figure img {
+    width: 400px;
+    max-width: 90%;
+}
